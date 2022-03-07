@@ -6,6 +6,7 @@ import { askQuestion, clear, print } from '../console';
 interface WakeUp {
 	wake?: WakeUpFromDream;
 }
+
 interface WakeUpFromDream {
 	wake?: WakeUpFromREMSleep;
 }
@@ -13,6 +14,7 @@ interface WakeUpFromDream {
 interface WakeUpFromREMSleep {
 	wake?: WakeUpFromDeepSleep;
 }
+
 interface WakeUpFromDeepSleep {
 	canWake?: string;
 }
@@ -45,6 +47,5 @@ export function wakeUp(): void {
 }
 
 function tryToWakeUp(): WakeUp {
-	// 👉 FIXME ❌
-	return {};
+	return {wake: {wake: { wake: {canWake: "Yes"}}}};
 }
