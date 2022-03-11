@@ -1,5 +1,5 @@
 import { endAdventure } from '..';
-import { attendAnotherTeaParty } from './3_tea_party2';
+import { playCroquet } from './4_croquet';
 import { askQuestion, clear, print } from '../console';
 
 const drinks = ['Coffee', 'Tea', 'Water', 'Lemonade'] as const;
@@ -18,9 +18,9 @@ interface Table {
 	seats: Array<Seat>;
 }
 
-export function attendATeaParty() {
+export function attendAnotherTeaParty() {
 	clear(true);
-	print('The Mad Hatter 🎩 welcomes you to his tea party ☕ ');
+	print('The Mad Hatter 🎩 welcomes you to another tea party ☕ ');
 
 	print(`He and the March Hare set the table...`);
 
@@ -54,10 +54,10 @@ export function attendATeaParty() {
 	}
 
 	print(
-		`🥳 Every seat had a lovely cup of tea, and a great time was had by all. 🥳 `
+		`🥳 Every seat had a another cup of tea. 🥳 `
 	);
-	print(`🏑 Time for another tea party! 🏑`);
-	return askQuestion('Press ENTER to continue! ', attendAnotherTeaParty);
+	print(`🏑 Time for a nice game of croquet! 🏑`);
+	return askQuestion('Press ENTER to continue! ', playCroquet);
 }
 
 function setTheTable(): Table {
